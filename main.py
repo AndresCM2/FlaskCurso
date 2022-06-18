@@ -1,23 +1,29 @@
-from flask import Flask, redirect, request, make_response
+from flask import Flask, request, make_response, redirect, render_template
 
-#Crear una instancia de Flask con nombre de APP
+app = Flask(__name__)
 
-app = Flask(__name__) 
+todos = [
+    'Comprar cafe', 
+    'Enviar una solicitud de compra', 
+    'Entregar video a producción']
 
-#Crear la primer ruta para el holo mundo
 
-#crear el decorador
 @app.route('/')
-#Crear la funcion de hola mundo
 def index():
     user_ip = request.remote_addr
-    response=make_response(redirect('/hello'))
-    response.set_cookie('user_ip',user_ip)
+
+    response = make_response(redirect('/hello'))
+    response.set_cookie('user_ip', user_ip)
+
     return response
 
 
 @app.route('/hello')
 def hello():
-    user_ip=request.cookies.get('user_ip')
-     #Creamos una nueva variable que va tener el la ip que detectamos en la requet
-    return 'Hel World Fla . tu ip es {}'.format(user_ip)
+    user_ip = request.cookies.get('user_ip')
+    context = {
+        'user_ip': user_ip,
+        'todos': todos,
+    }
+
+    return render_template('hello.html', **context)
