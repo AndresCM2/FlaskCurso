@@ -1,10 +1,12 @@
 # Instalacion de Flask
 
 ### Instalar VirtualEnv
+Instalacion en Window
 ```
 pip install virtualenv
 ```
 
+sudo apt install python3-pip
 ### Crear un ambiente Virtual con la versión de python a utilizar
 
 - Antes de ejecutar este comando descargar la version en la pagina [3.7](https://www.python.org/downloads/release/python-370/)
@@ -441,3 +443,11 @@ En la lista del archivo hell.html incluir el objeto creado.
     {% endfor %}
 </ul 
 ```
+# include y links
+
+### Crear archvo navbar.html
+con el siguiente comando
+```
+touch navbar.html
+```
+
