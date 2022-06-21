@@ -13,7 +13,7 @@
 {% else %}
     <a href="{{ url_for('index') }}">Ir a inicio</a>
 {% endif %}
-
+    
 <ul>
     {% for todo in todos %}
         {{macros.render_todo(todo)}}

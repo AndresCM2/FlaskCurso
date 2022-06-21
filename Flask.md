@@ -12,7 +12,7 @@ sudo apt install python3-pip
 - Antes de ejecutar este comando descargar la version en la pagina [3.7](https://www.python.org/downloads/release/python-370/)
 
 ```
-virtualenv venv python=pytnon3.7
+virtualenv venv python=python3.7
 ```
 ### Activar el entorno virtual
 ```
@@ -78,6 +78,14 @@ git pull origin main --allow-unrelated-histories
 ```
 git push origin main
 ```
+### Configurar correo y nombre en git
+```
+git config --list
+```
+incluir correo
+```
+git config --global user.email "py.andres.castao@gmail.com"
+
 
 # Crear Archivo main.py
 ```
