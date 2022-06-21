@@ -1,14 +1,23 @@
 # Instalacion de Flask
 
 ### Instalar VirtualEnv
+<<<<<<< HEAD
+=======
+Instalacion en Window
+>>>>>>> 760ecc815dccf5143153767118d14f92e4ea75bc
 ```
 pip install virtualenv
 ```
 
+<<<<<<< HEAD
+=======
+sudo apt install python3-pip
+>>>>>>> 760ecc815dccf5143153767118d14f92e4ea75bc
 ### Crear un ambiente Virtual con la versión de python a utilizar
 
 - Antes de ejecutar este comando descargar la version en la pagina [3.7](https://www.python.org/downloads/release/python-370/)
 
+<<<<<<< HEAD
 En caso tal de tener una version diferente de python ejecutar los siguientes comandos
 ```
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
@@ -17,6 +26,11 @@ sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
 virtualenv venv python=pytnon3.7
 ```
 
+=======
+```
+virtualenv venv python=python3.7
+```
+>>>>>>> 760ecc815dccf5143153767118d14f92e4ea75bc
 ### Activar el entorno virtual
 ```
 .\venv\Scripts\activate
@@ -41,12 +55,15 @@ pip freeze
 ```
 pip freeze > requirements.txt
 ```
+<<<<<<< HEAD
 ### Instalar un archivo requirement.txt
 
 ```
 $ pip install -r requirements.tx
 ```
 
+=======
+>>>>>>> 760ecc815dccf5143153767118d14f92e4ea75bc
 
 # Configurar Git
 
@@ -87,6 +104,17 @@ git pull origin main --allow-unrelated-histories
 ```
 git push origin main
 ```
+<<<<<<< HEAD
+=======
+### Configurar correo y nombre en git
+```
+git config --list
+```
+incluir correo
+```
+git config --global user.email "py.andres.castao@gmail.com"
+
+>>>>>>> 760ecc815dccf5143153767118d14f92e4ea75bc
 
 # Crear Archivo main.py
 ```
@@ -452,3 +480,14 @@ En la lista del archivo hell.html incluir el objeto creado.
     {% endfor %}
 </ul 
 ```
+<<<<<<< HEAD
+=======
+# include y links
+
+### Crear archvo navbar.html
+con el siguiente comando
+```
+touch navbar.html
+```
+
+>>>>>>> 760ecc815dccf5143153767118d14f92e4ea75bc
