@@ -1,5 +1,7 @@
 # Instalacion de Flask
 
+<details>
+
 ### Instalar VirtualEnv
 Instalacion en Window
 ```
@@ -38,8 +40,13 @@ pip freeze
 ```
 pip freeze > requirements.txt
 ```
+</details>
+
 
 # Configurar Git
+
+
+<details>
 
 ### Ingresar a git
 ```
@@ -63,6 +70,7 @@ git branch -M main
 git remote
 ```
 ### Validar rutas
+
 ```
 git remote -v
 ```
@@ -85,10 +93,15 @@ git config --list
 incluir correo
 ```
 git config --global user.email "py.andres.castao@gmail.com"
+```
+
+</details>
 
 
 # Crear Archivo main.py
-```
+
+<details>
+
 touch main.py
 ``` 
 En el archivo de main importar la libreria de flask
@@ -115,6 +128,8 @@ def hello():
 
 # Prender un nuevo servidor para correr la aplicacion en el navegador
 
+<details>
+
 ### Crear una variable de ambiente en el entorno de comandos
 ```
 export FLASK_APP=main.py
@@ -130,8 +145,11 @@ echo $FLASK_APP
 ```
 Flask run
 ```
+</details>
 
 # Debugging en Flask
+
+<details>
 
 Con la creacion de un Servido para desarrollo con el metodo anterior siempre se requerira correr nuevamente los cambios para que se logren visualidar en el navegador.
 
@@ -147,10 +165,14 @@ Ejecutamos la instrución de run y validamos que el cambio en el Debug mode: est
 ```
 Flask run
 ```
+</details>
 
 # Ciclo de request y response
 
 <details>
+
+## Code
+
 
 ```py
 from flask import Flask, request
@@ -169,11 +191,9 @@ def hello():
     user_ip = request-
     return 'Hello World Flask'
 ```
-</details>
 
 Con el siguiente codigo se crea un response que envia la informacion a una cookies y esta su vez es recibida por otra aplicación
 
-<details>
 
 ```py
 from flask import Flask, request, make_response, redirect, render_template
@@ -205,9 +225,12 @@ def hello():
 
 
 ```
+
 </details>
 
 # Creacion del Template
+
+<details>
 
 ### Crear una carpeta con el nombre de template
 
@@ -227,7 +250,6 @@ New-Item hell.html
 
 ### Codigo para conectar el template de holla.html
 
-<details>
 
 ```py
 from flask import Flask,request, make_response,redirect,render_template
@@ -255,15 +277,17 @@ def hello():
     return render_template('hello.html', user_ip=user_ip)
 
 ```
-</details>
+
 
 ### Escribir el siguientes codigo html en el arvhivo Hello.html
 
 ```html
 <h1>Hello Wold Platzi, ti IP es{{user_ip}}</h1>
 ```
+</details>
 
 # Generar Estructuras de control
+
 
 [Curso flash](https://docs.google.com/presentation/d/18WoO6bmYvlYVb6EmdanLOigjl9dmeUXpiuTUiaxLsKQ/edit#slide=id.g13588a5d876_0_0)
 
@@ -280,7 +304,6 @@ def hello():
 
 ```
 ### Crear una lista 
-<details>
 
 ```py
 from flask import Flask, request, make_response, redirect, render_template
@@ -317,7 +340,6 @@ def hello():
 </details>
 
 En el html ingresamos el siguiente código
-<details>
 
 ```html
 <ul>
@@ -327,9 +349,12 @@ En el html ingresamos el siguiente código
 </ul>
 
 ```
+
 </details>
 
 # Herencias en templates
+
+<details>
 
 [Jinja2 Snippet Extension](https://github.com/wyattferguson/jinja2-kit-vscode)
 
@@ -342,7 +367,7 @@ touch base.html
 ```html
 <!DOCTYPE html>)
 <html lang="en">
-<head>
+    <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -350,12 +375,12 @@ touch base.html
 </head>
 <body>
     
-</body>
+    </body>
 </html>
 ```
-</detarils>
 
 >Apartir de este momento tenemos un power point con los print de pantalla
+
 
 ### Extender
 
@@ -380,6 +405,7 @@ Se coloca el siguiente código en el archivo hello.
 {% endblock title %}
 ```
 se valida la pestaña en el navegador la cual anida la informacion del "super" con la info del hijo "hello|base" -> "Bienvenidos|Flask de prueba"
+
 ### Extender contenido
 
 Para extender contenido colocamos en el body del archivo base.html el siguiente codigo.
@@ -451,6 +477,9 @@ En la lista del archivo hell.html incluir el objeto creado.
     {% endfor %}
 </ul 
 ```
+
+</details>
+
 # include y links
 
 ### Crear archvo navbar.html
