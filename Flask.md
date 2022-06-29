@@ -3,7 +3,7 @@
 <details>
 
 ### Instalar VirtualEnv
-Instalacion en Window
+Instalaciones en Window
 ```
 pip install virtualenv
 ```
@@ -45,18 +45,17 @@ pip freeze > requirements.txt
 
 # Configurar Git
 
-
 <details>
 
 ### Ingresar a git
 ```
 git init
-```
 ### Crear una archivo .gitingnore
+```
 ```
 touch .gitignore
 ```
-Dentro de este rachivo se ingresa todas las carpetas o archivos que no se van a cargar en github
+Dentro de este archivo se ingresa todas las carpetas o archivos que no se van a cargar en github
 ### Cambiar de rama a main
 ```
 git branch -M main
@@ -93,6 +92,64 @@ git config --list
 incluir correo
 ```
 git config --global user.email "py.andres.castao@gmail.com"
+```
+
+</details>
+
+# Crear una crear un clave privada
+
+<details>
+
+Validamos con el siguiente comando, que el correo y el nombre de usuario estén creados.
+```
+git config --global user.email "xxxxxxx@xxxxx.com"
+```
+Del mismo modo con la siguiente instrucción creamos el nombre del usuario.
+```
+git config --global user.name "Nxxxxxxxx Nxxxxxxxxx"
+```
+Con el siguiente comando validamos que efectivamente esten creados.
+
+```
+git config --global -l 
+```
+Después de validar que efectivamente fue creado el correo y el usuario, se procede a crear la clave ssh con el siguiente comando.
+```
+ssh-keygen -t rsa -b 4096 -C "xxxxxxxx@xxxxxx.com"
+```
+al ejecutar este comando me solicita crear el nombre del archivo le doy enter.
+me solicita la clave con la que voy a guardar el nombre del archivo y me pide confirmarla nuevamente de esta forma me genera en la ruta de mi usuario una carpeta .ssh con en nombre id_rsa y otra con el nombre id_rsa.pub.
+
+Con el siguiente comando validamos que efectivamente fue creado la clave privada.
+
+```
+eval "$(ssh-agent -s)"
+```
+
+de esta forma copio mi archivo.pub en la siguiente ruta en github.
+
+Ingresamos a setting de github, luego a SSH and GPG keys, le damos click a New SSH key pegamos  la clave en Key, le damos y un title y luego lo add (añadimos).
+
+Posterior a esto con el siguiente comando validamos la ruta.
+```
+git remote -v
+```
+vamos a github y copiamos en el enlace ssh generado para ejecutarlo en con el siguiente comando.
+```
+git remote set-url origin git@github.com:AndresCM2/FlaskCurso.git
+```
+Ejecutamos el siguiente comando el cual no va a solicita la clave personal que le asignamos.
+```
+git pull origin main --allow-unrelated-histories
+```
+Nos solicita confirmar.
+```
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+```
+y posterior nos pide la clave que le asignamos
+```
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enter passphrase for key '/c/Users/CMI/.ssh/id_rsa':xxxx
 ```
 
 </details>
@@ -384,7 +441,7 @@ touch base.html
 
 ### Extender
 
-Extender desde el archivo de hello.html la informacion de hello.html a base, escribiendo la siguente sentencia.
+Extender desde el archivo de hello.html la información de hello.html a base, escribiendo la siguiente sentencia.
 ```
 {% extends 'base.html' %}
 ```
@@ -404,17 +461,17 @@ Se coloca el siguiente código en el archivo hello.
     Bienvenidos
 {% endblock title %}
 ```
-se valida la pestaña en el navegador la cual anida la informacion del "super" con la info del hijo "hello|base" -> "Bienvenidos|Flask de prueba"
+se valida la pestaña en el navegador la cual anida la información del "super" con la info del hijo "hello|base" -> "Bienvenidos|Flask de prueba"
 
 ### Extender contenido
 
-Para extender contenido colocamos en el body del archivo base.html el siguiente codigo.
+Para extender contenido colocamos en el body del archivo base.html el siguiente código.
 
 ```
 {% block content %}
     {% endblock %}
 ```
-y en el archivo hello.html el siguiente código conteniendo la la informacion del contenido.
+y en el archivo hello.html el siguiente código conteniendo la la información del contenido.
 ```html
 {% block content  %}
 
@@ -482,9 +539,15 @@ En la lista del archivo hell.html incluir el objeto creado.
 
 # include y links
 
-### Crear archvo navbar.html
+### Crear arch$ivo navbar.html
 con el siguiente comando
 ```
 touch navbar.html
 ```
+
+
+
+
+
+
 

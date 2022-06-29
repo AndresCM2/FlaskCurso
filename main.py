@@ -3,8 +3,8 @@ from flask import Flask, request, make_response, redirect, render_template
 app = Flask(__name__)
 
 todos = [
-    'Comprar cafe', 
-    'Enviar una solicitud de compra', 
+    'Comprar cafe',
+    'Enviar una solicitud de compra',
     'Entregar video a producción']
 
 
@@ -27,3 +27,5 @@ def hello():
     }
 
     return render_template('hello.html', **context)
+
+
