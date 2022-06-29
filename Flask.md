@@ -252,14 +252,14 @@ app = Flask(__name__)
 
 #crear el decorador
 @app.route('/')
-#Crear la funcion de hola mundo
+#Crear la función de hola mundo
 def hello():
     #Creamos una nueva variable que va tener el la ip que detectamos en la requet
     user_ip = request.remote_addr
     return 'Hello World Flask,tu ip {}'.format(user_ip)
 ```
 
-Con el siguiente codigo se crea un response que envia la informacion a una cookies y esta su vez es recibida por otra aplicación
+Con el siguiente código se crea un response que envía la información a una cookies y esta su vez es recibida por otra aplicación
 
 
 ```py
