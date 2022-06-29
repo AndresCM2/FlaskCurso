@@ -1,11 +1,5 @@
 from flask import Flask, request, make_response, redirect, render_template
 
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 760ecc815dccf5143153767118d14f92e4ea75bc
 app = Flask(__name__)
 
 todos = [
