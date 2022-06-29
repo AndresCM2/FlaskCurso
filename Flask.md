@@ -1,11 +1,11 @@
-# Instalacion de Flask
+# Instalación de Flask
 
 <details>
 
 ### Instalar VirtualEnv
 
 Instalaciones en Window
-
+```
 pip install virtualenv
 ```
 
@@ -17,7 +17,7 @@ En caso tal de tener una version diferente de python ejecutar los siguientes com
 ```
 sudo update-alternatives --install /usr/bin/python python /usr/bin/python3.7 1
 ```
-
+```
 virtualenv venv python=pytnon3.7
 ```
 
@@ -45,20 +45,14 @@ pip freeze
 ```
 pip freeze > requirements.txt
 ```
-<<<<<<< HEAD
+
 </details>
 
-=======
-<<<<<<< HEAD
 ### Instalar un archivo requirement.txt
 
 ```
 $ pip install -r requirements.tx
 ```
-
-=======
->>>>>>> 760ecc815dccf5143153767118d14f92e4ea75bc
->>>>>>> 45b7ec1cc661bd7b6034b65a3490f6d67232f23c
 
 # Configurar Git
 
@@ -102,8 +96,6 @@ git pull origin main --allow-unrelated-histories
 ```
 git push origin main
 ```
-<<<<<<< HEAD
-=======
 ### Configurar correo y nombre en git
 ```
 git config --list
@@ -173,7 +165,6 @@ Enter passphrase for key '/c/Users/CMI/.ssh/id_rsa':xxxx
 
 </details>
 
->>>>>>> 760ecc815dccf5143153767118d14f92e4ea75bc
 
 # Crear Archivo main.py
 
@@ -554,14 +545,10 @@ En la lista del archivo hell.html incluir el objeto creado.
     {% endfor %}
 </ul 
 ```
-<<<<<<< HEAD
 
 </details>
 
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 45b7ec1cc661bd7b6034b65a3490f6d67232f23c
+
 # include y links
 
 ### Crear arch$ivo navbar.html
@@ -570,13 +557,4 @@ con el siguiente comando
 touch navbar.html
 ```
 
-<<<<<<< HEAD
-
-
-
-
-
-
-=======
->>>>>>> 760ecc815dccf5143153767118d14f92e4ea75bc
 >>>>>>> 45b7ec1cc661bd7b6034b65a3490f6d67232f23c
