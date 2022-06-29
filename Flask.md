@@ -61,8 +61,8 @@ $ pip install -r requirements.tx
 ### Ingresar a git
 ```
 git init
-### Crear una archivo .gitingnore
 ```
+### Crear una archivo .gitingnore
 ```
 touch .gitignore
 ```
