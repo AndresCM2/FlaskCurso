@@ -46,13 +46,13 @@ pip freeze
 pip freeze > requirements.txt
 ```
 
-</details>
 
 ### Instalar un archivo requirement.txt
 
 ```
 $ pip install -r requirements.tx
 ```
+</details>
 
 # Configurar Git
 
@@ -84,7 +84,7 @@ git remote
 ```
 git remote -v
 ```
-### Jalar la coneccion del repositori Github
+### Jalar la conexión del repositorio Github
 ```
 git pull origin main 
 ```
@@ -92,7 +92,7 @@ git pull origin main
 ```
 git pull origin main --allow-unrelated-histories
 ```
-### Enpujar informacion
+### Empujar información
 ```
 git push origin main
 ```
@@ -172,7 +172,7 @@ Enter passphrase for key '/c/Users/CMI/.ssh/id_rsa':xxxx
 
 touch main.py
 ``` 
-En el archivo de main importar la libreria de flask
+En el archivo de main importar la librería de flask
 
 >`main.py`
 <details>  
@@ -188,13 +188,13 @@ app = Flask(__name__)
 
 #crear el decorador
 @app.route('/')
-#Crear la funcion de hola mundo
+#Crear la función de hola mundo
 def hello():
     return 'Hello World Flask'
 ```
 </details>
 
-# Prender un nuevo servidor para correr la aplicacion en el navegador
+# Prender un nuevo servidor para correr la aplicación en el navegador
 
 <details>
 
@@ -219,17 +219,17 @@ Flask run
 
 <details>
 
-Con la creacion de un Servido para desarrollo con el metodo anterior siempre se requerira correr nuevamente los cambios para que se logren visualidar en el navegador.
+Con la creación de un Servido para desarrollo con el método anterior siempre se requerirá correr nuevamente los cambios para que se logren visualizar en el navegador.
 
 por lo tanto si activamos el Debug mode: con el comando
 ```
 export FLASK_DEBUG=1
 ```
-Validamos que esta varible exista
+Validamos que esta variable exista
 ```
 echo $FLASK_DEBUG
 ```
-Ejecutamos la instrución de run y validamos que el cambio en el Debug mode: estea en ON
+Ejecutamos la instrucción de run y validamos que el cambio en el Debug mode: este en ON
 ```
 Flask run
 ```
@@ -307,7 +307,7 @@ mkdir template
 ```
 ### Crear un archivo con el nombre hello.html en la carpeta de template
 
-si estas en el bash de git escribir el siguente comando
+si estas en el bash de git escribir el siguiente comando
 ```
 touch hello.html 
 ```
@@ -316,7 +316,7 @@ si esta en la terminal de powersheet escribir el siguiente comando
 New-Item hell.html
 ```
 
-### Codigo para conectar el template de holla.html
+### Código para conectar el template de hello.html
 
 
 ```py
@@ -502,7 +502,7 @@ y en el archivo hello.html el siguiente código conteniendo la la información d
 ```
 ### Crear una lista personalizada
 
-Para personlizar los nombres tenemos que nombrarlos y adicional vincular la variable "todos" a la lista del contenido del archivo hello.html.
+Para personalizar los nombres tenemos que nombrarlos y adicional vincular la variable "todos" a la lista del contenido del archivo hello.html.
 
 ```py
 todos = [
@@ -510,7 +510,7 @@ todos = [
     'Enviar una solicitud de compra', 
     'Entregar video a producción']
 ```
-y vincular la varible todos del archivo hello.html
+y vincular la variable todos del archivo hello.html
 ```html
 <ul>
     {% for todo in todos %}
