@@ -170,13 +170,12 @@ Enter passphrase for key '/c/Users/CMI/.ssh/id_rsa':xxxx
 
 <details>
 
+```
 touch main.py
 ``` 
+>main.py
+
 En el archivo de main importar la librería de flask
-
->`main.py`
-<details>  
-
 ```py
 from flask import Flask
 
