@@ -146,7 +146,7 @@ Posterior a esto con el siguiente comando validamos la ruta.
 git remote -v
 ```
 vamos a github y copiamos en el enlace ssh generado para ejecutarlo en con el siguiente comando.
-```
+``` 
 git remote set-url origin git@github.com:AndresCM2/FlaskCurso.git
 ```
 Ejecutamos el siguiente comando el cual no va a solicita la clave personal que le asignamos.
@@ -555,5 +555,49 @@ con el siguiente comando
 ```
 touch navbar.html
 ```
+En nuestro archivo navbar.html incluimos dos link 
+```html
+<nav>
+    <ul>
+        <li><a href="{{url_for('index')}}">ir a inicio</a>
+        <li><a href="https://github.com/AndresCM2">ir a mi github</a>
 
->>>>>>> 45b7ec1cc661bd7b6034b65a3490f6d67232f23c
+    </ul>
+</nav>
+```
+luego en nuestro archivo base.html extendemos la funcionalidad del navbar para que de esta forma incluyendo el siguiente código en el body como encabezado.
+
+```html
+<body>
+    <header>
+        {% include 'navbar.html' %}
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+```
+### Creación de archivos estáticos
+
+Creamos una carpeta con el nombre `static | images` he incluimos la imagen que deseamos añadir.
+
+```
+mkdir static
+```
+```
+mkdir images
+```
+Pegamos la imagen en esta ruta `static|mages`.
+
+En el archivo navbar incluimos el siguiente código el cual nos indica la ruta y el archivo de documento estático.
+
+```html
+<nav>
+    <ul>
+        <img src="{{url_for('static',filename='images/imagen de prueba.jfif')}}" alt="contador">
+        <li><a href="{{url_for('index')}}">ir a inicio</a>
+        <li><a href="https://github.com/AndresCM2">ir a mi github</a>
+
+    </ul>
+</nav>
+```
+
