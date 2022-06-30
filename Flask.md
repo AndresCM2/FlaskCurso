@@ -600,4 +600,23 @@ En el archivo navbar incluimos el siguiente código el cual nos indica la ruta y
     </ul>
 </nav>
 ```
+En la carpeta static creamos una nueva carpeta con el nombre de `css` y en esta carpeta creamos un archivo llamado static.css.
 
+```
+mkdir css
+```
+```
+touch main.css
+```
+En este archivo ingresamos en siguiente código para dar tamaño a la images.
+
+```css
+img{
+    max-width: 30px;   
+}
+```
+En el archivo base, ingresamos el código link para enlazar el css.
+
+```html
+ <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+```
